@@ -1,0 +1,59 @@
+[
+  {
+    "id": 2,
+    "nombrePrincipal": "QUIÉNES SOMOS",
+    "nombrePrincipalUrl": "quienes-somos",
+    "subMenu1": [
+      {
+        "id": 1,
+        "nombreSubMenu1": "NUESTRA ORGANIZACIÓN",
+        "nombreSubMenu1Url": "nuestra-organizacion",
+        "subMenu2": []
+      },
+      {
+        "id": 2,
+        "nombreSubMenu1": "POLÍTICA DEL SIG",
+        "nombreSubMenu1Url": "politica-del-sig",
+        "subMenu2": []
+      },
+      {
+        "id": 3,
+        "nombreSubMenu1": "SOSTENIBLIDAD",
+        "nombreSubMenu1Url": "sostenibilidad",
+        "subMenu2": [
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombrePrincipal": "PRODUCTOS",
+    "nombrePrincipalUrl": "productos",
+    "subMenu1": []
+  },
+  {
+    "id": 4,
+    "nombrePrincipal": "GESTIÓN E IMPACTO SOCIAL",
+    "nombrePrincipalUrl": "gestion-e-impacto-social",
+    "subMenu1": [
+      {
+        "id": 1,
+        "nombreSubMenu1": "CONSERVARE TIERRA",
+        "nombreSubMenu1Url": "conservare-tierra",
+        "subMenu2": []
+      },
+      {
+        "id": 2,
+        "nombreSubMenu1": "RESPONSABILIDAD SOCIAL",
+        "nombreSubMenu1Url": "responsabilidad-social",
+        "subMenu2": []
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombrePrincipal": "CONTÁCTENOS",
+    "nombrePrincipalUrl": "contactenos",
+    "subMenu1": []
+  }
+]

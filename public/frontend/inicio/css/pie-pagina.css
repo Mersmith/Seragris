@@ -1,0 +1,173 @@
+.contenedor_pie_pagina {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+        "contenedor_pie_contacto  contenedor_pie_informacion"
+        "contenedor_pie_derechos contenedor_pie_derechos";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto 100px;
+    background-color: black;
+}
+
+.contenedor_pie_contacto {
+    grid-area: contenedor_pie_contacto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.contenedor_pie_informacion {
+    grid-area: contenedor_pie_informacion;
+    padding: 50px;
+}
+
+.contenedor_pie_derechos {
+    grid-area: contenedor_pie_derechos;
+    padding: 10px 50px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+/***/
+
+.contenedor_pie_pagina .contenedor_titulo {
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.contenedor_pie_pagina .contenedor_titulo h2 {
+    font-size: 40px;
+    color: #ffff;
+    font-weight: 700;
+}
+
+/*Formulario*/
+.contenedor_pie_pagina form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_pie_pagina form input {
+    width: 100%;
+    background: transparent;
+    margin-bottom: 25px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #5e5e5b;
+    color: white;
+}
+
+.contenedor_pie_pagina form .contenedor_inputs_dos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor_pie_pagina form .contenedor_inputs_dos input {
+    display: flex;
+    width: 45%;
+}
+
+.contenedor_pie_pagina form textarea {
+    width: 100%;
+    background: transparent;
+    margin-bottom: 25px;
+    font-size: 20px;
+    border: 1px solid #5e5e5b;
+    color: white;
+    border-radius: 10px;
+}
+
+.contenedor_pie_pagina form input:focus,
+.contenedor_pie_pagina form textarea:focus {
+    outline: none;
+}
+
+.contenedor_pie_pagina form button {
+    background: #ffa03d;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffff;
+}
+
+.contenedor_pie_pagina form button:hover {
+    background: #009eff;
+}
+
+/*Fin Formulario*/
+
+/*Informacion*/
+.contenedor_pie_pagina .contenedor_logo_telefono {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.contenedor_pie_pagina .contenedor_logo_telefono .contenedor_numero_telefono {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor_pie_pagina .contenedor_logo_telefono .contenedor_numero_telefono i {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.contenedor_pie_pagina .contenedor_informacion {
+    color: white;
+    padding: 25px 0px;
+}
+
+.contenedor_pie_pagina .contenedor_mapa iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.contenedor_pie_pagina .contenedor_direccion {
+    color: white;
+    padding: 15px 0px;
+}
+
+.contenedor_pie_pagina .contenedor_redes_sociales {
+    color: #ffa03d;
+    font-size: 25px;
+}
+
+.contenedor_pie_pagina .contenedor_redes_sociales a:hover {
+    color: #009eff;
+}
+
+/*Fin Informacion*/
+
+/*Derechos*/
+
+@media (max-width: 900px) {
+    .contenedor_pie_pagina {
+        display: grid;
+        width: 100%;
+        grid-template-areas:
+            "contenedor_pie_contacto"
+            "contenedor_pie_informacion"
+            "contenedor_pie_derechos";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 100px;
+    }
+
+    .contenedor_pie_pagina form .contenedor_inputs_dos {
+        flex-direction: column;
+    }
+
+    .contenedor_pie_pagina form .contenedor_inputs_dos input {
+        width: 100%;
+    }
+
+    .contenedor_pie_contacto,
+    .contenedor_pie_informacion,
+    .contenedor_pie_derechos {
+        padding: 15px;
+    }
+
+}
