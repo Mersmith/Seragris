@@ -7,10 +7,62 @@ PS C:\xampp\htdocs>code .
 ->Crear comandos.txt
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 git init
 git add .
 git commit -m "Iniciando Catalogo"
 git log
 git remote add origin https://github.com/Mersmith/Seragris.git
-git push origin main
+git push origin master
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+php artisan serve
+composer require laravel/jetstream
+php artisan jetstream:install livewire
+npm install
+npm run dev
+
+->Configurar el .env con la base de datos mysql.
+->Crear la base de datos en phpmyadmin.
+
+php artisan migrate
+
+*****************************************************************
+
+->Comentar los campos de User y los campos de entrada.
+php artisan make:model Administrador -msfc
+
+php artisan migrate
+php artisan make:livewire Administrador/PaginaPerfilAdministrador
+
+php artisan migrate:fresh --seed
+
+->cambiar en .env el filesystems la ruta, public
+php artisan storage:link
+
+*****************************************************************
+
+php artisan make:controller Administrador/InicioController
+php artisan make:controller Frontend/InicioController
+->Creamos layout de Frontend y Administrador
+
+*****************************************************************
+
+->Crear menu principal
+php artisan make:livewire Frontend/Menu/MenuPrincipal
+php artisan make:livewire Administrador/Menu/MenuPrincipal
+*****************************************************************
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 1_Layout_Frontend_Administrador
+git branch
+git status
+
+git add .
+git commit -m "1_Layout Frontend, Administrador, Menu Principal"
+git push origin 1_Layout_Frontend_Administrador
+->Click en boton Merge pull request
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
