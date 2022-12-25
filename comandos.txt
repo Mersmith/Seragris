@@ -1,0 +1,16 @@
+**************************25/10/22***************************************
+
+PS C:\xampp\htdocs>composer create-project laravel/laravel Seragris
+PS C:\xampp\htdocs>cd Seragris
+PS C:\xampp\htdocs>code .
+
+->Crear comandos.txt
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git init
+git add .
+git commit -m "Iniciando Catalogo"
+git log
+git remote add origin https://github.com/Mersmith/Seragris.git
+git push origin main
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
