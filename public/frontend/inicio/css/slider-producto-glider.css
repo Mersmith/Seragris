@@ -130,7 +130,7 @@
 }
 
 .slider_producto_boton {
-    background: #25d366;
+    background: #12866f;
     width: 160px;
     height: 40px;
     border-radius: 25px;
@@ -140,7 +140,7 @@
 }
 
 .slider_producto_boton:hover {
-    background: #12866f;
+    background: #25d366;
 }
 
 /*Tres productos*/

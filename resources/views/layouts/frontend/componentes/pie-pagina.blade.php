@@ -8,17 +8,17 @@
             <form action="" method="POST">
                 @csrf
                 @if (Session::has('email-contacto-correcto'))
-                    <span style="color: white;">{{Session::get('email-contacto-correcto')}}</span>
+                    <span style="color: white;">{{ Session::get('email-contacto-correcto') }}</span>
                 @endif
                 <div>
-                    <input type="text" name="nombre" placeholder=" Nombre" required>
+                    <input type="text" name="nombre" placeholder="Nombres" required>
                     @error('nombre')
                         <span>{{ $message }}</span>
                     @enderror
 
                 </div>
                 <div class="contenedor_inputs_dos">
-                    <input type="email" name="email" placeholder=" Correo electrónico" required>
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
                     @error('email')
                         <span>{{ $message }}</span>
                     @enderror
@@ -41,8 +41,9 @@
     </div>
     <div class="contenedor_pie_informacion">
         <div class="contenedor_logo_telefono">
-            <div class="contenedor_logo">
-                <img src="http://127.0.0.1:8000/imagenes/empresa/logo.png" alt="logo htdent">
+            <div class="contenedor_numero_telefono">
+                <i class="fa-solid fa-envelope"></i>
+                <p>mersmith14@gmail.com</p>
             </div>
             <div class="contenedor_numero_telefono">
                 <i class="fa-solid fa-phone-volume"></i>
@@ -51,11 +52,12 @@
         </div>
         <div class="contenedor_informacion">
             <p>
-                Es una empresa peruana dedicada a la venta de equipos RX portátil, Sensores RVG, Implantes, Mascarillas
-                de la marca Pointnix, Vatech, Posdion, Kuwotech, Megagen, Air Qeen, Remedi.
+                Brindamos soluciones integrales y personalizadas gracias a nuestra fuerza de ventas integrada por
+                ingenieros agrónomos especializados y un equipo profesional de servicio técnico en todos los valles
+                agrícolas del territorio peruano.
             </p>
             <br>
-            <p> Con el respaldo de las empresas H & T Med Dent, Digident.</p>
+            <p> Con el respaldo de grandes empresas.</p>
         </div>
         <div class="contenedor_mapa">
             <iframe
@@ -76,6 +78,6 @@
         </div>
     </div>
     <div class="contenedor_pie_derechos">
-        <small> Todos los Derechos Reservados - &copy;2022 <strong> HT Dent </strong></small>
+        <small> Todos los Derechos Reservados - &copy;2022 <strong> Seragris </strong></small>
     </div>
 </footer>

@@ -7,6 +7,9 @@
 <link rel="stylesheet" href="{{ asset('frontend/inicio/css/slider-principal.css') }}">
 <link rel="stylesheet" href="{{ asset('frontend/inicio/css/slider-producto-glider.css') }}">
 
+<!-- Styles Somos -->
+<link rel="stylesheet" href="{{ asset('frontend/somos/css/contenedor-descripcion.css') }}">
+
 
 <!-- Plugin -->
 <script src="{{ asset('vendor/glider-autoplay/glider-autoplay.min.js') }}"></script>

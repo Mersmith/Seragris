@@ -82,3 +82,16 @@ git push origin 2_Slider_Principal_Productos
 ->Click en boton Merge pull request
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 3_Pie_Empresa
+git branch
+git status
+
+git add .
+git commit -m "Pie de pagina y seccion de nosotros"
+git push origin 3_Pie_Empresa
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
