@@ -52,6 +52,7 @@ php artisan make:controller Frontend/InicioController
 ->Crear menu principal
 php artisan make:livewire Frontend/Menu/MenuPrincipal
 php artisan make:livewire Administrador/Menu/MenuPrincipal
+
 *****************************************************************
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -63,6 +64,21 @@ git status
 git add .
 git commit -m "1_Layout Frontend, Administrador, Menu Principal"
 git push origin 1_Layout_Frontend_Administrador
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+php artisan make:livewire Frontend/Productos/SliderProducto
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 2_Slider_Principal_Productos
+git branch
+git status
+
+git add .
+git commit -m "Slider Principal Productos"
+git push origin 2_Slider_Principal_Productos
 ->Click en boton Merge pull request
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
