@@ -47,7 +47,7 @@
                                 <a class="menu_nombre">{{ $menu['nombrePrincipal'] }}</a>
                                 <i class="fa-solid fa-sort-down"></i>
                             @else
-                                <a class="menu_nombre" href="">{{ $menu['nombrePrincipal'] }}</a>
+                                <a class="menu_nombre" href="{{ $menu['nombrePrincipalUrl'] }}">{{ $menu['nombrePrincipal'] }}</a>
                             @endif
                         </div>
                         <!--SubMenu1-->
@@ -67,7 +67,7 @@
                                                 <i class="fa-solid fa-sort-down"></i>
                                             @else
                                                 <a class="submenu_nombre"
-                                                    href="">{{ $subMenu1['nombreSubMenu1'] }}</a>
+                                                    href="{{ $subMenu1['nombreSubMenu1Url'] }}">{{ $subMenu1['nombreSubMenu1'] }}</a>
                                             @endif
                                         </div>
                                     </div>

@@ -40,12 +40,12 @@
             },
         }), {
             interval: 5000,
-            onPause: function() {
+            /*onPause: function() {
                 document.getElementById("status").innerHTML = "PAUSE";
             },
             onRestart: function() {
                 document.getElementById("status").innerHTML = "RUN";
-            },
+            },*/
         }
     );
 </script>

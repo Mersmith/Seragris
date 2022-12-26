@@ -30,7 +30,7 @@
             {{ $slot }}
         </main>
 
-       {{-- @include('layouts.frontend.componentes.pie-pagina')--}}
+       @include('layouts.frontend.componentes.pie-pagina')
 
     </div>
 
