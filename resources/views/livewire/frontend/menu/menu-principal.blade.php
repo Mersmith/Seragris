@@ -76,17 +76,17 @@
                         </div>
                     </div>
                 @endforeach
-                @if (Auth::user()->rol == 'administrador')
-                    <div class="elementos_menu_principal">
-                        <a href="{{ route('administrador.inicio') }}">
-                            <i class="fa-solid fa-user"></i>
-                        </a>
-                    </div>
-                @endif
+                @auth
+                    @if (Auth::user()->rol == 'administrador')
+                        <div class="elementos_menu_principal">
+                            <a href="{{ route('administrador.inicio') }}">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                        </div>
+                    @endif
+                @endauth
             </div>
-
             <!-- <hr> -->
-
             <!-- FIN MENU-PRINCIPAL -->
         </div>
         <div class="contenedor_iconos">
