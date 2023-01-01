@@ -1,0 +1,82 @@
+.contenedor_pagina_administrador_roles_crear {
+    width: 60%;
+}
+
+/*Estilos 1 elemento*/
+.contenedor_pagina_administrador_roles_crear .contenedor_1_elementos {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_pagina_administrador_roles_crear .contenedor_1_elementos .estilo_nombre_input {
+    font-weight: 500;
+}
+
+.contenedor_pagina_administrador_roles_crear .contenedor_1_elementos span {
+    color: #f78331;
+    font-weight: 500;
+}
+
+/*Estilos 1 elemento - Input text*/
+.contenedor_pagina_administrador_roles_crear .contenedor_1_elementos label {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.contenedor_pagina_administrador_roles_crear .estilos_input_text label {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_pagina_administrador_roles_crear .contenedor_1_elementos input[type=text],
+.contenedor_pagina_administrador_roles_crear .contenedor_1_elementos input[type=email],
+.contenedor_pagina_administrador_roles_crear .contenedor_1_elementos input[type=password] {
+    width: calc(50% - 5px);
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/*Estilos 1 elemento - Input checkbox*/
+.contenedor_pagina_administrador_roles_crear .estilos_checkbox {
+    flex-direction: column;
+}
+
+.contenedor_pagina_administrador_roles_crear .estilos_checkbox label {
+    cursor: pointer;
+}
+
+/*Estilos 1 elemento - Boton*/
+.contenedor_pagina_administrador_roles_crear .contenedor_1_elementos input[type=submit] {
+    width: calc(50% - 5px);
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffa03d;
+    color: white;
+    padding: 8px 0px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.contenedor_pagina_administrador_roles_crear .contenedor_1_elementos input[type=submit]:hover {
+    background-color: #f18f26;
+}
+
+@media (max-width: 900px) {
+    .contenedor_pagina_administrador_roles_crear {
+        width: 100%;
+    }
+
+    /*Estilos 1 elemento*/
+    .contenedor_pagina_administrador_roles_crear .contenedor_1_elementos input[type=submit] {
+        width: 100%;
+    }
+
+    /*Estilos 1 elemento - Input Text*/
+    .contenedor_pagina_administrador_roles_crear .contenedor_1_elementos input[type=text],
+    .contenedor_pagina_administrador_roles_crear .contenedor_1_elementos input[type=email],
+    .contenedor_pagina_administrador_roles_crear .contenedor_1_elementos input[type=password]  {
+        width: 100%;
+    }
+}

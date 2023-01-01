@@ -92,6 +92,159 @@
     color: #f59f14;
 }
 
+/*contenedor_politica_items*/
+.contenedor_politica_items {
+    padding: 40px 100px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-gap: 20px;
+}
+
+.contenedor_politica_items p {
+    text-align: justify;
+}
+
+.contenedor_politica_items .circulo_politica {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 1px solid #12866f;
+}
+
+.contenedor_politica_items i {
+    font-size: 50px;
+    color: #12866f;
+}
+
+.contenedor_politica_items div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+/*sostenibilidad_imagen*/
+.sostenibilidad_imagen {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sostenibilidad_imagen img {
+    max-height: 500px;
+}
+
+/*conservare_objetivos*/
+.conservare_objetivos {
+    padding: 40px 100px;
+    display: grid;
+    grid-template-areas: "objetivos  mapa";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.conservare_objetivos .objetivos {
+    grid-area: objetivos;
+}
+
+.conservare_objetivos .mapa {
+    grid-area: mapa;
+}
+
+.conservare_objetivos h3 {
+    font-size: 22px;
+    color: #12866f;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.conservare_objetivos .objetivos i {
+    font-size: 22px;
+    color: #12866f;
+}
+
+.conservare_objetivos table td {
+    padding: 10px;
+}
+
+.conservare_objetivos h5 {
+    font-size: 18px;
+    color: #12866f;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.conservare_objetivos .mapa {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*responsabilidad*/
+.responsabilidad {
+    padding: 40px 100px;
+}
+.responsabilidad span {
+    font-size: 30px;
+    color: #f59f14;
+    font-weight: 700;
+}
+.responsabilidad table {
+    display: flex;
+    justify-content: center;
+}
+.responsabilidad table td {
+    padding: 10px;
+}
+.responsabilidad td div {
+    color: white;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #12866f;
+    border-radius: 10px;
+}
+.responsabilidad td div i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+/*mapa_telefonos*/
+.mapa_telefonos {
+    padding: 40px 100px;
+    display: grid;
+    grid-template-areas: "mapa  tabla";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.mapa_telefonos table {
+   width: 100%;
+}
+.mapa_telefonos table td,
+.mapa_telefonos table th {
+    padding: 10px;
+}
+.mapa_telefonos .mapa {
+    grid-area: mapa;
+}
+
+.mapa_telefonos .tabla {
+    grid-area: tabla;
+}
+
 @media (max-width: 900px) {
     .contenedor_descripcion {
         padding: 20px 40px;
@@ -110,6 +263,28 @@
             "contenedor_compromiso contenedor_trabajo";
         grid-template-columns: 1fr 1fr;
     }
+    .contenedor_politica_items {
+        padding: 20px 40px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+    .conservare_objetivos {
+        padding: 20px 40px;
+        grid-template-areas:
+            "objetivos"
+            "mapa";
+        grid-template-columns: 1fr;
+    }
+    .responsabilidad {
+        padding: 20px 40px;
+    }
+    .mapa_telefonos {
+        padding: 20px 40px;
+        grid-template-areas:
+            "mapa"
+            "tabla";
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 500px) {
@@ -117,11 +292,25 @@
         padding: 20px 20px;
     }
     .contenedor_mision_vision {
-        padding: 20px 40px;
+        padding: 20px 20px;
         grid-template-areas:
             "contenedor_imagen"
             "contenedor_mision"
             "contenedor_vision";
         grid-template-columns: 1fr;
+    }
+    .contenedor_politica_items {
+        padding: 20px 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    .responsabilidad {
+        padding: 20px 20px;
+    }
+    .conservare_objetivos {
+        padding: 20px 20px;
+    }
+    .mapa_telefonos {
+        padding: 20px 20px;
     }
 }

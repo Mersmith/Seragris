@@ -95,3 +95,62 @@ git push origin 3_Pie_Empresa
 ->Click en boton Merge pull request
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************26/10/22***************************************
+
+->Vista politica
+php artisan make:livewire Administrador/Perfil/PaginaPerfilAdministrador
+php artisan make:livewire Administrador/Administrador/PaginaAdministradorAdministrador
+php artisan make:controller Administrador/AdministradorController
+php artisan make:request Administrador/StoreAdministrador
+
+php artisan make:model Marca -mfs
+php artisan make:model Imagen -mf
+php artisan make:livewire Administrador/Marca/PaginaMarcaAdministrador
+
+php artisan migrate
+
+php artisan storage:link
+
+php artisan make:model Categoria -ms
+php artisan make:model Subcategoria -ms
+php artisan make:migration create_categoria_marca_table
+
+php artisan make:livewire Administrador/Categoria/PaginaCategoriaAdministrador
+php artisan make:livewire Administrador/Subcategoria/PaginaSubcategoriaAdministrador
+
+php artisan make:model Producto -msf
+
+php artisan make:livewire Administrador/Producto/PaginaTodosProductoAdministrador
+php artisan make:livewire Administrador/Producto/PaginaEditarProductoAdministrador
+php artisan make:livewire Administrador/Producto/PaginaCrearProductoAdministrador
+
+php artisan make:livewire Administrador/Producto/ComponenteEstadoProducto
+php artisan make:livewire Frontend/Tienda/TiendaPagina
+
+php artisan make:controller Frontend/ProductoController
+
+php artisan make:model Ficha -mf
+
+**************************01/01/23***************************************
+php artisan make:livewire Frontend/Menu/Buscador
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 4_Modelos
+git branch
+git status
+
+git add .
+git commit -m "Modelos Administrador, Tienda, Buscador, Menu"
+git push origin 4_Modelos
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  {
+    "id": 9,
+    "nombrePrincipal": "Sliders",
+    "nombrePrincipalUrl": "administrador.slider.index",
+    "subMenu1": []
+  }

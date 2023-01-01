@@ -1,0 +1,115 @@
+.contenedor_pagina_administrador_perfil {
+    width: 60%;
+}
+
+/*Estilos 1 elemento*/
+.contenedor_pagina_administrador_perfil .contenedor_1_elementos {
+    display: flex;
+}
+
+/*Estilos 1 elemento - Input*/
+.contenedor_pagina_administrador_perfil .contenedor_1_elementos label {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.contenedor_pagina_administrador_perfil .contenedor_1_elementos input {
+    width: calc(50% - 5px);
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/*Estilos 1 elemento - Boton*/
+.contenedor_pagina_administrador_perfil .contenedor_1_elementos button {
+    width: calc(50% - 5px);
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffa03d;
+    color: white;
+    padding: 8px 0px;
+    font-weight: 500;
+}
+
+/*Estilos 1 elemento - Imagen*/
+.contenedor_pagina_administrador_perfil .contenedor_1_elementos img {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.contenedor_pagina_administrador_perfil .contenedor_cambiar_imagen {
+    position: relative;
+}
+
+.contenedor_pagina_administrador_perfil .contenedor_cambiar_imagen img {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.contenedor_pagina_administrador_perfil .contenedor_cambiar_imagen .opcion_cambiar {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.contenedor_pagina_administrador_perfil .contenedor_cambiar_imagen:hover img {
+    opacity: 0.3;
+}
+
+.contenedor_pagina_administrador_perfil .contenedor_cambiar_imagen:hover .opcion_cambiar {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/*Estilos 2 elementos*/
+.contenedor_pagina_administrador_perfil .contenedor_2_elementos {
+    display: flex;
+    gap: 10px;
+}
+
+.contenedor_pagina_administrador_perfil .contenedor_2_elementos label {
+    width: 50%;
+    margin: 10px 0px;
+}
+
+.contenedor_pagina_administrador_perfil .contenedor_2_elementos input {
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+@media (max-width: 900px) {
+    .contenedor_pagina_administrador_perfil {
+        width: 100%;
+    }
+
+    /*Estilos 1 elemento*/
+    .contenedor_pagina_administrador_perfil .contenedor_1_elementos button {
+        width: 100%;
+    }
+
+    /*Estilos 1 elemento - Input*/
+    .contenedor_pagina_administrador_perfil .contenedor_1_elementos input {
+        width: 100%;
+    }
+
+    /*Estilos 2 elemento*/
+    .contenedor_pagina_administrador_perfil .contenedor_2_elementos {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .contenedor_pagina_administrador_perfil .contenedor_2_elementos label {
+        width: 100%;
+    }
+}

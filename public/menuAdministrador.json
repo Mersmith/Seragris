@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nombrePrincipal": "Perfil",
+    "nombrePrincipalUrl": "administrador.perfil",
+    "subMenu1": []
+  },
+  {
+    "id": 2,
+    "nombrePrincipal": "Administradores",
+    "nombrePrincipalUrl": "administrador.administrador.index",
+    "subMenu1": [
+    ]
+  },
+  {
+    "id": 3,
+    "nombrePrincipal": "Marca",
+    "nombrePrincipalUrl": "administrador.marca",
+    "subMenu1": []
+  },
+  {
+    "id": 4,
+    "nombrePrincipal": "Categorias",
+    "nombrePrincipalUrl": "administrador.categoria",
+    "subMenu1": []
+  },
+  {
+    "id": 5,
+    "nombrePrincipal": "Producto",
+    "nombrePrincipalUrl": "producto",
+    "subMenu1": [
+      {
+        "id": 1,
+        "nombreSubMenu1": "Todos los productos",
+        "nombreSubMenu1Url": "administrador.producto.index"
+      },
+      {
+        "id": 2,
+        "nombreSubMenu1": "Crear producto",
+        "nombreSubMenu1Url": "administrador.producto.crear"
+      }
+    ]
+  }
+]

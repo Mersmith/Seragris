@@ -9,7 +9,10 @@
 
 <!-- Styles Somos -->
 <link rel="stylesheet" href="{{ asset('frontend/somos/css/contenedor-descripcion.css') }}">
-
+<!-- Styles Tienda -->
+<link rel="stylesheet" href="{{ asset('frontend/tienda/tienda.css') }}">
+<!-- Styles Producto -->
+<link rel="stylesheet" href="{{ asset('frontend/producto/pagina-producto.css') }}">
 
 <!-- Plugin -->
 <script src="{{ asset('vendor/glider-autoplay/glider-autoplay.min.js') }}"></script>

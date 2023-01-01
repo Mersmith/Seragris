@@ -1,0 +1,121 @@
+.contenedor_pagina_producto {
+    padding: 20px;
+}
+
+.contenedor_centrar_pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor_info_producto {
+    margin-top: 40px;
+    width: 70%;
+    display: grid;
+    grid-template-areas:
+        "contenedor_producto_imagen  contenedor_producto_info";
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 50px;
+}
+/*Estilos imagen*/
+.contenedor_producto_imagen {
+    grid-area: contenedor_producto_imagen;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.contenedor_imagen_producto_principal {
+    /*height: 500px;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contenedor_imagen_producto_principal img {
+    /*width: 100%;*/
+    height: 500px;
+}
+
+/*Fin imagen*/
+
+/*Estilos info producto*/
+.contenedor_producto_info {
+    grid-area: contenedor_producto_info;
+}
+
+.contenedor_producto_info h1 {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 33px;
+}
+
+.contenedor_producto_info .producto_info_precio {
+    font-size: 30px;
+    font-weight: 700;
+    color: #12866f;
+}
+
+.contenedor_producto_info .producto_info_precio span {
+    font-size: 15px;
+    color: #f59f14;
+}
+
+.informacion_producto ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.caracteristica_producto{
+    display: flex;
+    padding: 10px 0px;
+}
+
+/*Botones*/
+.contenedor_pagina_producto .producto_boton_pdf {
+    margin-top: 10px;
+    background: #f59f14;
+    border-radius: 10px;
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 12px;
+}
+
+.contenedor_pagina_producto .producto_boton_pdf:hover {
+    background: #e79003;
+}
+
+.contenedor_pagina_producto .producto_boton_wsp {
+    margin-top: 10px;
+
+    background: #12866f;
+    border-radius: 10px;
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 12px;
+}
+
+.contenedor_pagina_producto .producto_boton_wsp:hover {
+    background: #25d366;
+}
+
+@media (max-width: 1200px) {
+    .contenedor_info_producto {
+        width: 90%;
+    }
+}
+
+@media (max-width: 900px) {
+    .contenedor_info_producto {
+        width: 100%;
+        grid-template-areas:
+            "contenedor_producto_imagen"
+            "contenedor_producto_info";
+        grid-template-columns: 1fr;
+    }
+}

@@ -14,8 +14,10 @@
             <span> mersmith14@gmail.com</span>
         </div>
         <div class="menu-contacto-comprar  menu-contacto-ocultar">
-            <i class="fa-solid fa-shop"></i>
-            COMPRA AQUÍ
+            <a href="{{ route('tienda') }}">
+                <i class="fa-solid fa-shop"></i>
+                COMPRA AQUÍ
+            </a>
         </div>
     </div>
     <nav class="navbar">
@@ -47,7 +49,8 @@
                                 <a class="menu_nombre">{{ $menu['nombrePrincipal'] }}</a>
                                 <i class="fa-solid fa-sort-down"></i>
                             @else
-                                <a class="menu_nombre" href="{{ $menu['nombrePrincipalUrl'] }}">{{ $menu['nombrePrincipal'] }}</a>
+                                <a class="menu_nombre"
+                                    href="{{ $menu['nombrePrincipalUrl'] }}">{{ $menu['nombrePrincipal'] }}</a>
                             @endif
                         </div>
                         <!--SubMenu1-->
@@ -79,7 +82,7 @@
                 @auth
                     @if (Auth::user()->rol == 'administrador')
                         <div class="elementos_menu_principal">
-                            <a href="{{ route('administrador.inicio') }}">
+                            <a href="{{ route('administrador.perfil') }}">
                                 <i class="fa-solid fa-user"></i>
                             </a>
                         </div>
@@ -90,10 +93,7 @@
             <!-- FIN MENU-PRINCIPAL -->
         </div>
         <div class="contenedor_iconos">
-            <div>
-                <input type="text" placeholder="Buscar.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </div>
+            @livewire('frontend.menu.buscador')
         </div>
     </nav>
 </header>
