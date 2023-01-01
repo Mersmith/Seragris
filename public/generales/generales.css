@@ -1,0 +1,300 @@
+/*Contenedor Layout Administrador*/
+.contenedor_layout_administrador {
+    margin-left: 300px;
+    padding: 20px;
+}
+
+/*Contenedor Paginas Administrador*/
+.contenedor_paginas_administrador {
+    width: 100%;
+}
+
+/*Mensaje alerta*/
+.mensaje_alerta {
+    background-color: #009eff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: white;
+}
+
+.mensaje_alerta p {
+    margin-right: 5px;
+}
+
+/*Fin Mensaje alerta*/
+
+/*Titulo*/
+.contenedor_paginas_titulo {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #cfd3d9;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/*Boton crear o regresar*/
+.contenedor_boton_titulo a {
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffa03d;
+    color: white;
+    padding: 8px 10px;
+    font-weight: 500;
+}
+
+.contenedor_boton_titulo button {
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 6px 10px;
+    font-weight: 500;
+}
+
+.contenedor_boton_titulo a:hover {
+    background-color: #f18f26;
+}
+
+.contenedor_boton_titulo button:hover  {
+    background-color: #df1616;
+}
+
+/*Fin Boton crear*/
+
+/*Contenedor No existe*/
+.contenedor_no_existe_elementos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #aaaaaa;
+    font-size: 24px;
+}
+
+/*Fin Contenedor No existe*/
+
+/*Contenedor Buscador*/
+.contenedor_buscador input {
+    margin-top: 20px;
+}
+
+.contenedor_buscador input {
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/*Fin Contenedor Buscador*/
+
+/*Contenedor Formulario*/
+
+/*Formulario*/
+.formulario input[type=text],
+.formulario input[type=email],
+.formulario input[type=password],
+.formulario input[type=number],
+.formulario input[type=date],
+.formulario textarea,
+.formulario select {
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario input[type=radio] {
+    cursor: pointer;
+}
+
+.formulario button,
+.formulario input[type=submit] {
+    width: 100%;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffa03d;
+    color: white;
+    padding: 8px 0px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.formulario button:hover,
+.formulario input[type=submit]:hover {
+    background-color: #f18f26;
+}
+
+.estilo_nombre_input {
+    font-weight: 500;
+}
+
+/*Contenedor 1 Elemento Imagen*/
+.contenedor_1_elementos_imagen {
+    display: flex;
+    width: 100%
+}
+
+.contenedor_1_elementos_imagen .label_principal {
+    cursor: pointer;
+}
+
+/*Contenedor 1 Elemento 100%*/
+.contenedor_1_elementos_100 {
+    display: flex;
+    width: 100%
+}
+
+.contenedor_1_elementos_100 .label_principal {
+    cursor: pointer;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+/*Contenedor 1 Elemento*/
+.contenedor_1_elementos {
+    display: flex;
+    width: calc(50% - 5px);
+}
+
+.contenedor_1_elementos .label_principal {
+    cursor: pointer;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+/*Fin Contenedor 1 Elemento*/
+
+/*Contenedor 2 Elemento*/
+.contenedor_2_elementos {
+    display: flex;
+    gap: 10px;
+}
+
+.contenedor_2_elementos .label_principal {
+    cursor: pointer;
+    width: 50%;
+    margin: 10px 0px;
+}
+
+/*Fin Contenedor 2 Elemento*/
+
+/*Contenedor Imagen*/
+.contenedor_subir_imagen_sola {
+    position: relative;
+}
+
+.contenedor_subir_imagen_sola img {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.contenedor_subir_imagen_sola .opcion_cambiar_imagen {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.contenedor_subir_imagen_sola:hover img {
+    opacity: 0.3;
+}
+
+.contenedor_subir_imagen_sola:hover .opcion_cambiar_imagen {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/*Fin Contenedor Imagen*/
+
+
+/*Contenedor Imagenes*/
+.contenedor_imagenes_subir {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.contenedor_imagenes_subir div button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    border-radius: 50px;
+    padding: 0px 8px;
+}
+
+.contenedor_imagenes_subir div button:hover {
+    background-color: #df1616;
+}
+
+/*Fin Contenedor Formulario*/
+
+/*MODALES*/
+.contenedor_titulo_modal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor_pie_modal {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contenedor_pie_modal button {
+    font-weight: 500;
+    margin: 8px 0px;
+    color: white;
+    cursor: pointer;
+    padding: 4px 24px;
+    border-radius: 50px;
+}
+
+/*Fin MODALES*/
+
+/*Estilos lista ckeditor5 */
+.ck.ck-content ul,
+.ck.ck-content ul li {
+    list-style-type: inherit;
+}
+
+.ck.ck-content ul {
+    padding-left: 40px;
+}
+
+/*Fin Estilos lista ckeditor5 */
+
+@media (max-width: 900px) {
+
+    /*Contenedor Paginas Administrador*/
+    .contenedor_layout_administrador {
+        margin-left: 0px;
+    }
+
+    /*Estilos 1 elemento*/
+    .contenedor_1_elementos {
+        width: 100%;
+    }
+
+    /*Estilos 2 elemento*/
+    .contenedor_2_elementos {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .contenedor_2_elementos .label_principal {
+        width: 100%;
+    }
+}

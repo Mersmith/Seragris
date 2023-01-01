@@ -1,0 +1,196 @@
+.contenedor_layout_administrador {
+    margin-left: 300px;
+    padding: 20px;
+}
+/*Mensaje alerta*/
+.mensaje_alerta{
+    background-color: #009eff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: white;
+}
+
+.mensaje_alerta p{
+    margin-right: 5px;
+}
+/*Titulo*/
+.contenedor_layout_administrador .administrador_paginas_titulo {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #cfd3d9;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/*Boton crear*/
+.contenedor_boton_crear a {
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffa03d;
+    color: white;
+    padding: 8px 10px;
+    font-weight: 500;
+}
+
+.contenedor_boton_crear a:hover {
+    background-color: #f18f26;
+}
+
+/*Contenedor No existe*/
+.conetenedor_no_existe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #aaaaaa;
+    font-size: 24px;
+
+}
+
+/*Contenedor Buscador*/
+.contenedor_buscador input{
+    margin-top: 20px;
+}
+
+.contenedor_buscador input{
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.titulo_pagina {
+    font-size: 24px;
+    color: #282828;
+    font-weight: 600;
+}
+
+/*FORMULARIO*/
+.contenedor_formulario {
+    padding: 10px 0px;
+}
+
+.contenedor_elemento_formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0px;
+}
+
+.contenedor_elemento_formulario label {
+    color: #282828;
+    font-weight: 500;
+}
+
+.contenedor_elemento_formulario code {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.contenedor_formulario_checkbox label {
+    margin-right: 5px;
+    font-weight: 400;
+}
+
+/*.contenedor_formulario_imagen {
+    display: flex;
+}*/
+
+.contenedor_formulario_imagen div {
+    position: relative;
+}
+
+.contenedor_formulario_imagen button {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+}
+
+.contenedor_formulario_imagen i {
+    color: white;
+}
+
+/*
+.contenedor_formulario_imagen button:hover i {
+    color: #009eff;
+}*/
+
+.contenedor_formulario_imagen img {
+    margin-bottom: 8px;
+}
+
+.formulario_boton_imagen {
+    background-color: #009eff;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 50px;
+}
+
+.contenedor_formulario_imagen img {
+    height: 150px;
+}
+
+.contenedor_formulario_imagen label {
+    margin-right: 5px;
+    font-weight: 400;
+    color: white;
+}
+
+.formulario_boton_enviar {
+    display: flex;
+    align-items: center;
+}
+
+.formulario_boton_enviar input {
+    cursor: pointer;
+    font-weight: 500;
+    margin: 8px 0px;
+    background-color: #ffa03d;
+    color: white;
+    cursor: pointer;
+    padding: 8px 8px;
+    border-radius: 50px;
+    width: 200px;
+}
+
+.formulario_boton_enviar input:hover {
+    background-color: #009eff;
+}
+
+/*FIN FORMULARIO*/
+
+.tabla_controles {
+    cursor: pointer;
+    display: flex;
+}
+
+.contenedor_variacion {
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.contenedor_variacion_medida_color {
+    padding: 5px 20px;
+}
+
+/*Estilos lista ckeditor5 */
+.ck.ck-content ul,
+.ck.ck-content ul li {
+    list-style-type: inherit;
+}
+
+.ck.ck-content ul {
+    padding-left: 40px;
+}
+
+/*Fin Estilos lista ckeditor5 */
+
+
+@media (max-width: 900px) {
+    .contenedor_layout_administrador {
+        margin-left: 0px;
+    }
+}

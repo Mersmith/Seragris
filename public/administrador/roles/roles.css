@@ -1,0 +1,24 @@
+.contenedor_pagina_administrador_roles {
+    width: 60%;
+}
+
+.contenedor_pagina_administrador_roles .contenedor_boton_crear a {
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffa03d;
+    color: white;
+    padding: 8px 10px;
+    font-weight: 500;
+}
+
+.contenedor_pagina_administrador_roles .contenedor_boton_crear a:hover {
+    background-color: #ec9231;
+}
+
+@media (max-width: 900px) {
+    .contenedor_pagina_administrador_roles {
+        width: 100%;
+    }
+
+}

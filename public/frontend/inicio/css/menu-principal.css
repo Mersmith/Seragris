@@ -102,7 +102,7 @@ nav {
     padding: 5px;
 }
 
-.contenedor_iconos div {
+.contenedor_iconos form {
     width: 100%;
     border: 2px solid #12866f;
     display: flex;

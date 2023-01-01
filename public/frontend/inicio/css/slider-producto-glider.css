@@ -151,8 +151,12 @@
 }
 
 @media only screen and (max-width: 901px) {
+    .centrar_contenedor_slider_producto {
+        margin-bottom: 10px;
+    }
     .slider_producto_titulo {
         font-size: 30px;
         line-height: 37px;
+        padding: 20px 0px;
     }
 }
