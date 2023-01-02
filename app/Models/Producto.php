@@ -34,6 +34,11 @@ class Producto extends Model
         return $this->morphMany(Ficha::class, "fichaable");
     }
 
+    public function hojas()
+    {
+        return $this->morphMany(Hoja::class, "hojaable");
+    }
+
     //URl amigables
     public function getRouteKeyName()
     {

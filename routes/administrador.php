@@ -9,6 +9,7 @@ use App\Http\Livewire\Administrador\Perfil\PaginaPerfilAdministrador;
 use App\Http\Livewire\Administrador\Producto\PaginaCrearProductoAdministrador;
 use App\Http\Livewire\Administrador\Producto\PaginaEditarProductoAdministrador;
 use App\Http\Livewire\Administrador\Producto\PaginaTodosProductoAdministrador;
+use App\Http\Livewire\Administrador\Slider\PaginaSliderAdministrador;
 use App\Http\Livewire\Administrador\Subcategoria\PaginaSubcategoriaAdministrador;
 use Illuminate\Support\Facades\Route;
 
@@ -28,3 +29,5 @@ Route::get('subcategoria/{categoria}', PaginaSubcategoriaAdministrador::class)->
 Route::get('producto', PaginaTodosProductoAdministrador::class)->name('producto.index');
 Route::get('producto/crear', PaginaCrearProductoAdministrador::class)->name('producto.crear');
 Route::get('producto/{producto}/editar', PaginaEditarProductoAdministrador::class)->name('producto.editar');
+
+Route::get('slider', PaginaSliderAdministrador::class)->name('slider.index');

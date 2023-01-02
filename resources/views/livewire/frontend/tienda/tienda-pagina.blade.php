@@ -101,7 +101,7 @@
                 @forelse ($productos as $producto)
                     <div class="item_slider_producto" style="margin-bottom: 30px;">
                         <div class="slider_producto_imagen">
-                            <a href="">
+                            <a href="{{ route('producto.index', $producto) }}">
                                 @if ($producto->imagenes->count())
                                     <img src="{{ Storage::url($producto->imagenes->first()->imagen_ruta) }}"
                                         alt="" />

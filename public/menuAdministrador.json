@@ -6,13 +6,6 @@
     "subMenu1": []
   },
   {
-    "id": 2,
-    "nombrePrincipal": "Administradores",
-    "nombrePrincipalUrl": "administrador.administrador.index",
-    "subMenu1": [
-    ]
-  },
-  {
     "id": 3,
     "nombrePrincipal": "Marca",
     "nombrePrincipalUrl": "administrador.marca",
@@ -40,5 +33,11 @@
         "nombreSubMenu1Url": "administrador.producto.crear"
       }
     ]
+  },
+  {
+    "id": 6,
+    "nombrePrincipal": "Sliders",
+    "nombrePrincipalUrl": "administrador.slider.index",
+    "subMenu1": []
   }
 ]

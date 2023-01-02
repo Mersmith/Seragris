@@ -25,10 +25,10 @@
                         <span style="color: #12866f;">{{ $producto->subcategoria->nombre }}</span>
                     </p>
                     <h1>{{ $producto->nombre }} </h1>
-                    <p class="producto_info_precio">$ {{ number_format($producto->precio, 2, '.', ',') }}
+                    <p class="producto_info_precio">S/.{{ number_format($producto->precio, 2, '.', ',') }}
                         @if ($producto->precio !== $producto->precio_real)
                             <span>Antes<span style="text-decoration:line-through;">
-                                    ${{ number_format($producto->precio_real, 2, '.', ',') }}</span></span>
+                                    S/.{{ number_format($producto->precio_real, 2, '.', ',') }}</span></span>
                         @endif
                     </p>
                     <!--informacion-->
@@ -41,7 +41,7 @@
                         <div class="informacion_producto caracteristica_producto">
                             <div>
                                 <img style="width: 50px; height: 50px;"
-                                    src="{{ asset('imagenes/producto/sin_foto_producto.png') }}">
+                                    src="{{ asset('imagenes/producto/controla.png') }}">
                             </div>
                             <div>
                                 <p style="margin: 5px 0px; color: #12866f;"><strong>Controla</strong> </p>
@@ -54,7 +54,7 @@
                         <div class="informacion_producto caracteristica_producto">
                             <div>
                                 <img style="width: 50px; height: 50px;"
-                                    src="{{ asset('imagenes/producto/sin_foto_producto.png') }}">
+                                    src="{{ asset('imagenes/producto/cultivo.png') }}">
                             </div>
                             <div>
                                 <p style="margin: 5px 0px; color: #12866f;"><strong>Cultivos en los que se usa</strong>
@@ -68,7 +68,7 @@
                         <div class="informacion_producto caracteristica_producto">
                             <div>
                                 <img style="width: 50px; height: 50px;"
-                                    src="{{ asset('imagenes/producto/sin_foto_producto.png') }}">
+                                    src="{{ asset('imagenes/producto/ingrediente.png') }}">
                             </div>
                             <div>
                                 <p style="margin: 5px 0px; color: #12866f;"><strong>Ingrediente Activo</strong> </p>
@@ -88,18 +88,24 @@
                         $wspLink = "https://api.whatsapp.com/send/?phone=$numeroCelular&text=$textoMensaje&app_absent=0";
                     @endphp
                     <div>
-                        <button class="producto_boton_pdf">
-                            <a href="{{ $urlProducto }}">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                Ficha técnica
-                            </a>
-                        </button>
-                        <button class="producto_boton_pdf">
-                            <a href="">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                Hoja de Seguridad
-                            </a>
-                        </button>
+                        @if ($producto->fichas->count())
+                            <button class="producto_boton_pdf">
+                                <a href="{{ Storage::url($producto->fichas->first()->ficha_ruta) }}" target="_blank">
+                                    <i class="fa-solid fa-file"></i>
+                                    Ficha técnica
+                                </a>
+                            </button>
+                        @endif
+
+                        @if ($producto->hojas->count())
+                            <button class="producto_boton_pdf">
+                                <a href="{{ Storage::url($producto->hojas->first()->hoja_ruta) }}" target="_blank">
+                                    <i class="fa-solid fa-file-lines"></i>
+                                    Hoja de Seguridad
+                                </a>
+                            </button>
+                        @endif
+
                         <button class="producto_boton_wsp">
                             <a href="{{ $wspLink }}" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i>

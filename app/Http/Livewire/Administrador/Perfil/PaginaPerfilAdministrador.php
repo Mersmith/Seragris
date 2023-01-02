@@ -44,6 +44,8 @@ class PaginaPerfilAdministrador extends Component
                 'imagen_ruta' => $this->nueva_imagen_ruta ? $imagenNombre  : $this->imagen_ruta,
             ]
         );
+
+        $this->emit('mensajeActualizado', "Perfil actualizado.");
     }
 
     public function render()

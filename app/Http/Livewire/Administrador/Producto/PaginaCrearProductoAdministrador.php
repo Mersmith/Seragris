@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Categoria;
+use App\Models\Ficha;
 use App\Models\Marca;
 use App\Models\Subcategoria;
 use App\Models\Producto;
@@ -28,7 +29,9 @@ class PaginaCrearProductoAdministrador extends Component
         $controla = null,
         $cultivos = null,
         $ingredientes = null,
-        $estado = 1;
+        $estado = 2;
+
+    public $ficha, $hoja;
 
     protected $rules = [
         'categoria_id' => 'required',
@@ -109,6 +112,14 @@ class PaginaCrearProductoAdministrador extends Component
     {
         $rules = $this->rules;
 
+        if ($this->ficha) {
+            $rules['ficha'] = 'required|file|mimes:pdf';
+        }
+
+        if ($this->hoja) {
+            $rules['hoja'] = 'required|file|mimes:pdf';
+        }
+
         $this->validate($rules);
 
         $producto = new Producto();
@@ -134,6 +145,20 @@ class PaginaCrearProductoAdministrador extends Component
         $producto->imagenes()->create([
             'imagen_ruta' => $imagenSubir
         ]);
+
+        if ($this->ficha) {
+            $fichaSubir = $this->ficha->store('fichas');
+            $producto->fichas()->create([
+                'ficha_ruta' => $fichaSubir
+            ]);
+        }
+
+        if ($this->hoja) {
+            $hojaSubir = $this->hoja->store('hojas');
+            $producto->hojas()->create([
+                'hoja_ruta' => $hojaSubir
+            ]);
+        }
 
         $this->emit('mensajeCreado', "El producto fué creado.");
 

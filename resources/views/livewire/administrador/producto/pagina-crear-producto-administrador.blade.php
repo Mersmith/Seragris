@@ -16,11 +16,11 @@
                     <p class="estilo_nombre_input">Estado: </p>
                     <div>
                         <label>
-                            <input type="radio" value="1" name="estado" wire:model.defer="estado">
+                            <input type="radio" value="2" name="estado" wire:model.defer="estado">
                             Publicado
                         </label>
                         <label>
-                            <input type="radio" value="2" name="estado" wire:model.defer="estado">
+                            <input type="radio" value="1" name="estado" wire:model.defer="estado">
                             Borrador
                         </label>
                     </div>
@@ -239,6 +239,57 @@
             @error('ingredientes')
                 <span>{{ $message }}</span>
             @enderror
+
+            <!--Ficha-->
+            <div class="contenedor_1_elementos">
+                <label class="label_principal">
+                    <p class="estilo_nombre_input">Ficha: </p>
+                    <div class="contenedor_subir_imagen_sola"
+                        style="width: 100px; display: flex; flex-direction:column; justify-content: center;">
+                        @if ($ficha)
+                            <img src="{{ asset('imagenes/pdf/con_foto_pdf.png') }}">
+                        @else
+                            <img src="{{ asset('imagenes/pdf/sin_foto_pdf.png') }}">
+                        @endif
+                        <div class="opcion_cambiar_imagen">
+                            Editar <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                    </div>
+                    <input type="file" wire:model="ficha" style="display: none">
+                    @error('ficha')
+                        <span>{{ $message }}</span>
+                    @enderror
+                </label>
+            </div>
+            @if ($ficha)
+                <p style="cursor: pointer;" wire:click="$set('ficha', null)">Borrar <i class="fa-solid fa-trash"></i>
+                </p>
+            @endif
+            <!--Hoja-->
+            <div class="contenedor_1_elementos">
+                <label class="label_principal">
+                    <p class="estilo_nombre_input">Hoja: </p>
+                    <div class="contenedor_subir_imagen_sola"
+                        style="width: 100px; height: 100px; display: flex; justify-content: center;">
+                        @if ($hoja)
+                            <img src="{{ asset('imagenes/pdf/con_foto_pdf.png') }}">
+                        @else
+                            <img src="{{ asset('imagenes/pdf/sin_foto_pdf.png') }}">
+                        @endif
+                        <div class="opcion_cambiar_imagen">
+                            Editar <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                    </div>
+                    <input type="file" wire:model="hoja" style="display: none">
+                    @error('hoja')
+                        <span>{{ $message }}</span>
+                    @enderror
+                </label>
+            </div>
+            @if ($hoja)
+                <p style="cursor: pointer;" wire:click="$set('hoja', null)">Borrar <i class="fa-solid fa-trash"></i>
+                </p>
+            @endif
             <!--Enviar-->
             <div class="contenedor_1_elementos">
                 <input type="submit" value="Crear Producto">

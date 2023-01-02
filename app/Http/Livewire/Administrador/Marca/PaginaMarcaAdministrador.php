@@ -90,6 +90,7 @@ class PaginaMarcaAdministrador extends Component
         $marca->delete();
         $this->traerMarcas();
     }
+    
     public function render()
     {
         return view('livewire.administrador.marca.pagina-marca-administrador')->layout('layouts.administrador.administrador');

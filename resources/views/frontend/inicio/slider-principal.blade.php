@@ -1,23 +1,20 @@
 <div class="contenedor_slider_principal">
     <div class="contenedor_slider_items glider1" id="contenedor_slider_items">
-        <!--Slider1-->
-        <div class="slider_item_principal">
-            <a>
-                <img src="{{ asset('imagenes/slider/slider1.jpg') }}" class="slider_principal_imagen">
-            </a>
-        </div>
-        <!--Slider2-->
-        <div class="slider_item_principal">
-            <a>
-                <img src="{{ asset('imagenes/slider/slider2.jpg') }}" class="slider_principal_imagen">
-            </a>
-        </div>
-        <!--Slider3-->
-        <div class="slider_item_principal">
-            <a>
-                <img src="{{ asset('imagenes/slider/slider3.jpg') }}" class="slider_principal_imagen">
-            </a>
-        </div>
+        @foreach ($sliders as $slider)
+            <div class="slider_item_principal">
+                @if ($slider->link)
+                    <a href="//{{ $slider->link }}" target="_blank">
+                        <img src="{{ Storage::url($slider->imagenes->first()->imagen_ruta) }}"
+                            class="slider_principal_imagen">
+                    </a>
+                @else
+                    <a>
+                        <img src="{{ Storage::url($slider->imagenes->first()->imagen_ruta) }}"
+                            class="slider_principal_imagen">
+                    </a>
+                @endif
+            </div>
+        @endforeach
     </div>
     <button aria-label="Previous" id="boton_izquierdo_slider_principal" class="slider_principal_boton glider-prev-1">
         <i class="fa-solid fa-angle-left"></i>
