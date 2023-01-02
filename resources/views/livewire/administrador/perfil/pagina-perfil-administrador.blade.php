@@ -25,5 +25,9 @@
                 <button type="submit">Actualizar cambios</button>
             </div>
         </form>
+        <!--Actualizar contraseña-->
     </div>
+    <h2 class="contenedor_paginas_titulo">CAMBIAR CONTRASEÑA</h2>
+
+    @livewire('profile.update-password-form')
 </div>

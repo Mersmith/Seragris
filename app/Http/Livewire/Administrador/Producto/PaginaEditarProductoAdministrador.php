@@ -3,6 +3,8 @@
 namespace App\Http\Livewire\Administrador\Producto;
 
 use App\Models\Categoria;
+use App\Models\Ficha;
+use App\Models\Hoja;
 use App\Models\Imagen;
 use App\Models\Marca;
 use App\Models\Producto;
@@ -17,7 +19,7 @@ class PaginaEditarProductoAdministrador extends Component
 {
     use WithFileUploads;
 
-    protected $listeners = ['editarProducto'];
+    protected $listeners = ['editarProducto', 'eliminarProducto'];
 
     public $producto, $categorias, $subcategorias, $marcas;
     public $editar_imagen, $editar_ficha_tecnica, $editar_hoja_seguridad;
@@ -28,7 +30,7 @@ class PaginaEditarProductoAdministrador extends Component
         $cultivos,
         $ingredientes;
 
-    public $ficha;
+    public $ficha, $hoja;
 
     protected $rules = [
         'categoria_id' => 'required',
@@ -111,6 +113,38 @@ class PaginaEditarProductoAdministrador extends Component
         return Subcategoria::find($this->producto->subcategoria_id);
     }
 
+    public function eliminarFicha()
+    {
+        if ($this->producto->fichas->count()) {
+            $fichas = $this->producto->fichas;
+            foreach ($fichas as $fichaItem) {
+                Storage::delete($fichaItem->ficha_ruta);
+                $fichaItem->delete();
+            }
+            $this->reset(['ficha']);
+
+            $this->producto = $this->producto->fresh();
+
+            $this->emit('mensajeEliminado', "Ficha Eliminado");
+        }
+    }
+
+    public function eliminarHoja()
+    {
+        if ($this->producto->hojas->count()) {
+            $hojas = $this->producto->hojas;
+            foreach ($hojas as $hojaItem) {
+                Storage::delete($hojaItem->hoja_ruta);
+                $hojaItem->delete();
+            }
+            $this->reset(['hoja']);
+
+            $this->producto = $this->producto->fresh();
+
+            $this->emit('mensajeEliminado', "Hoja Eliminado");
+        }
+    }
+
     public function editarProducto()
     {
         $rules = $this->rules;
@@ -122,6 +156,10 @@ class PaginaEditarProductoAdministrador extends Component
 
         if ($this->ficha) {
             $rules['ficha'] = 'required|file|mimes:pdf';
+        }
+
+        if ($this->hoja) {
+            $rules['hoja'] = 'required|file|mimes:pdf';
         }
 
         $this->validate($rules);
@@ -151,7 +189,7 @@ class PaginaEditarProductoAdministrador extends Component
             if ($this->producto->fichas->count()) {
                 Storage::delete([$this->producto->fichas->first()->ficha_ruta]);
 
-                $fichaBusqueda = Imagen::find($this->producto->fichas->first()->id);
+                $fichaBusqueda = Ficha::find($this->producto->fichas->first()->id);
                 $fichaBusqueda->delete();
             }
 
@@ -159,6 +197,21 @@ class PaginaEditarProductoAdministrador extends Component
 
             $this->producto->fichas()->create([
                 'ficha_ruta' => $fichaNueva
+            ]);
+        }
+
+        if ($this->hoja) {
+            if ($this->producto->hojas->count()) {
+                Storage::delete([$this->producto->hojas->first()->hoja_ruta]);
+
+                $hojaBusqueda = Hoja::find($this->producto->hojas->first()->id);
+                $hojaBusqueda->delete();
+            }
+
+            $hojaNueva = $this->hoja->store('hojas');
+
+            $this->producto->hojas()->create([
+                'hoja_ruta' => $hojaNueva
             ]);
         }
 
@@ -172,6 +225,22 @@ class PaginaEditarProductoAdministrador extends Component
         foreach ($imagenes as $imagen) {
             Storage::delete($imagen->imagen_ruta);
             $imagen->delete();
+        }
+
+        if ($this->producto->fichas->count()) {
+            $fichas = $this->producto->fichas;
+            foreach ($fichas as $fichaItem) {
+                Storage::delete($fichaItem->ficha_ruta);
+                $fichaItem->delete();
+            }
+        }
+
+        if ($this->producto->hojas->count()) {
+            $hojas = $this->producto->hojas;
+            foreach ($hojas as $hojaItem) {
+                Storage::delete($hojaItem->hoja_ruta);
+                $hojaItem->delete();
+            }
         }
 
         $this->producto->delete();

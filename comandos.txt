@@ -148,9 +148,33 @@ git push origin 4_Modelos
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+php artisan make:livewire Administrador/Slider/PaginaSliderAdministrador
+
+php artisan make:model Slider -m
+
+php artisan make:controller Api\SortSliderController
+
+php artisan migrate:fresh --seed
+
+php artisan make:model Hoja -mf
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 5_Producto_PDF
+git branch
+git status
+
+git add .
+git commit -m "PDF crud"
+git push origin 5_Producto_PDF
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
   {
-    "id": 9,
-    "nombrePrincipal": "Sliders",
-    "nombrePrincipalUrl": "administrador.slider.index",
-    "subMenu1": []
-  }
+    "id": 2,
+    "nombrePrincipal": "Administradores",
+    "nombrePrincipalUrl": "administrador.administrador.index",
+    "subMenu1": [
+    ]
+  },

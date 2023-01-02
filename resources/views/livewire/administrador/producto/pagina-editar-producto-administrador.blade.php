@@ -254,6 +254,45 @@
                     @enderror
                 </label>
             </div>
+            @if ($ficha)
+                <p style="cursor: pointer;" wire:click="$set('ficha', null)">Borrar<i class="fa-solid fa-trash"></i>
+                </p>
+            @elseif($producto->fichas->count())
+                <p style="cursor: pointer;" wire:click="eliminarFicha()">Borrar<i class="fa-solid fa-trash"></i>
+                </p>
+            @else
+                <p></p>
+            @endif
+            <!--Hoja-->
+            <div class="contenedor_1_elementos">
+                <label class="label_principal">
+                    <p class="estilo_nombre_input">Hoja: </p>
+                    <div class="contenedor_subir_imagen_sola"
+                        style="width: 100px; height: 100px; display: flex; justify-content: center;">
+                        @if ($hoja)
+                            <img src="{{ asset('imagenes/pdf/con_foto_pdf.png') }}">
+                        @elseif($producto->hojas->count())
+                            <img src="{{ asset('imagenes/pdf/con_foto_pdf.png') }}">
+                        @else
+                            <img src="{{ asset('imagenes/pdf/sin_foto_pdf.png') }}">
+                        @endif
+                        <div class="opcion_cambiar_imagen">
+                            Editar <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                    </div>
+                    <input type="file" wire:model="hoja" style="display: none">
+                    @error('hoja')
+                        <span>{{ $message }}</span>
+                    @enderror
+                </label>
+            </div>
+            @if ($hoja)
+                <p style="cursor: pointer;" wire:click="$set('hoja', null)">Borrar <i class="fa-solid fa-trash"></i>
+                </p>
+            @elseif($producto->hojas->count())
+                <p style="cursor: pointer;" wire:click="eliminarHoja()">Borrar <i class="fa-solid fa-trash"></i>
+                </p>
+            @endif
             <!--Enviar-->
             <div class="contenedor_1_elementos">
                 <!--<input type="submit" value="Actualizar Producto">-->
@@ -263,4 +302,32 @@
             </div>
         </div>
     </div>
+
+    @push('script')
+        <script>
+            Livewire.on('eliminarProductoModal', () => {
+                Swal.fire({
+                    title: '¿Quieres eliminar?',
+                    text: "No podrás recupar este producto.",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: '¡Sí, eliminar!',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Livewire.emitTo('administrador.producto.pagina-editar-producto-administrador',
+                            'eliminarProducto');
+                        Swal.fire(
+                            '¡Eliminado!',
+                            'Eliminaste correctamente.',
+                            'success'
+                        )
+                    }
+                })
+
+            })
+        </script>
+    @endpush
 </div>
