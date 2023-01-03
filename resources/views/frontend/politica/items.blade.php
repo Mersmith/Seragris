@@ -2,66 +2,61 @@
     <!--1-->
     <div>
         <div class="circulo_politica">
-            <i class="fa-solid fa-handshake"></i>
+            <i class="fa-solid fa-1"></i>
         </div>
-        <p>Asegurar la satisfacción de nuestros clientes con productos y servicios de calidad e innovadores cumpliendo
-            con los requisitos aplicables.</p>
+        <h3 style="font-weight: 700; color: #12866f;">Vocación de servicio</h3>
+        <p>Satisfacer al cliente es una actitud de nuestro
+            personal en la empresa, atendemos todas las
+            necesidades de nuestros clientes y asesoramos
+            cualquier duda para satisfacer sus expectativas.</p>
     </div>
     <!--2-->
     <div>
-        <div class="circulo_politica">
-            <i class="fa-solid fa-handshake"></i>
+        <div class="circulo_politica" style="border: 1px solid #ffa03d;">
+            <i class="fa-solid fa-2" style="color: #ffa03d;"></i>
         </div>
-        <p>Trabajar de manera responsable protegiendo el medio ambiente y previniendo la contaminación ambiental,
-            identificando, evaluando y mitigando los impactos ambientales adversos a nuestras actividades.</p>
+        <h3 style="font-weight: 700; color: #ffa03d;">Trabajo en equipo</h3>
+        <p>Complementamos las iniciativas, potenciamos las ideas y
+            conocimientos individuales, para que nuestro trabajo así sea
+            más eficaz, eficiente y fructífero.</p>
     </div>
     <!--3-->
     <div>
         <div class="circulo_politica">
-            <i class="fa-solid fa-handshake"></i>
+            <i class="fa-solid fa-3"></i>
         </div>
-        <p>Promover la seguridad y salud de todos los trabajadores, contratistas y visitantes mediante la prevención de
-            las lesiones, dolencias, enfermedades e incidentes ocupacionales. Por ello, se proporciona condiciones de
-            trabajo seguras y saludables para la prevención de daños y deterioro de la salud relacionados con el
-            trabajo.</p>
+        <h3 style="font-weight: 700; color: #12866f;">Cultivos de calidad</h3>
+        <p>Nuestro trabajo y afán de superación
+            hace que mejoremos día a día ofreciendo
+            a nuestros clientes un producto con
+            altos estándares de calidad y efectividad
+            en sus cultivos, siempre con un trato
+            directo, amable y personalizado;
+            conocemos de primera mano el
+            esfuerzo que conlleva obtener un cultivo
+            rentable.</p>
     </div>
     <!--4-->
     <div>
-        <div class="circulo_politica">
-            <i class="fa-solid fa-handshake"></i>
+        <div class="circulo_politica" style="border: 1px solid #ffa03d;">
+            <i class="fa-solid fa-4" style="color: #ffa03d;"></i>
         </div>
-        <p>Eliminar los peligros y reducir los riesgos en Seguridad y Salud en el Trabajo utilizando la jerarquía de
-            controles.</p>
+        <h3 style="font-weight: 700; color: #ffa03d;">Honestidad
+            y transparencia</h3>
+        <p>Trabajamos con la máxima honradez y
+            dignidad, para que nuestro trato con el
+            cliente sea lo más transparente posible.</p>
     </div>
     <!--5-->
     <div>
         <div class="circulo_politica">
-            <i class="fa-solid fa-handshake"></i>
+            <i class="fa-solid fa-5"></i>
         </div>
-        <p>Garantizar el cumplimiento de las más estrictas normas legales vigentes y otros requisitos legales
-            pertinentes, aplicables a la Calidad, Seguridad, Salud en el Trabajo y Medio Ambiente.</p>
-    </div>
-    <!--6-->
-    <div>
-        <div class="circulo_politica">
-            <i class="fa-solid fa-handshake"></i>
-        </div>
-        <p>Garantizar que los trabajadores y sus representantes sean consultados y participen activamente en el Sistema
-            Integrado de Gestión.</p>
-    </div>
-    <!--7-->
-    <div>
-        <div class="circulo_politica">
-            <i class="fa-solid fa-handshake"></i>
-        </div>
-        <p>Potenciar las competencias de nuestros colaboradores e innovar en la gestión de nuestros procesos.</p>
-    </div>
-    <!--8-->
-    <div>
-        <div class="circulo_politica">
-            <i class="fa-solid fa-handshake"></i>
-        </div>
-        <p>Promover la mejora continua del Sistema Integrado de Gestión para mejorar el desempeño SIG en el Grupo
-            Silvestre.</p>
+        <h3 style="font-weight: 700; color: #12866f;">Calidad competitiva</h3>
+        <p>Nuestra actitud de liderazgo y el ímpetu
+            por la mejora continua, unida a nuestra
+            constancia, hace que nuestros productos
+            y servicios sean de la máxima calidad
+            para los cultivos.</p>
     </div>
 </div>
