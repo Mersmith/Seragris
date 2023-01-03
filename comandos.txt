@@ -178,3 +178,16 @@ git push origin 5_Producto_PDF
     "subMenu1": [
     ]
   },
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 6_Modificaciones_1
+git branch
+git status
+
+git add .
+git commit -m "Modificaciones con Helen."
+git push origin 6_Modificaciones_1
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

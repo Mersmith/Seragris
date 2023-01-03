@@ -7,11 +7,11 @@
     <div class="menu-contacto">
         <div class="menu-contacto-opcion" style="border-right: 1px solid #f59f14;">
             <i class="fa-solid fa-phone-volume"></i>
-            <span>617-3300</span>
+            <a href="tel:+51993 796 221"><span>993 796 221</span></a>
         </div>
         <div class="menu-contacto-opcion">
             <i class="fa-solid fa-envelope"></i>
-            <span> mersmith14@gmail.com</span>
+            <a href="mailto:info@seragris.com"><span>info@seragris.com</span></a>
         </div>
         <div class="menu-contacto-comprar  menu-contacto-ocultar">
             <a href="{{ route('tienda') }}">

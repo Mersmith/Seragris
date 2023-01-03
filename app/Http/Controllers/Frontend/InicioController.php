@@ -10,7 +10,7 @@ class InicioController extends Controller
 {
     public function __invoke()
     {
-        $sliders = Slider::where('estado', '0')->orderBy('posicion', 'desc')->get();
+        $sliders = Slider::where('estado', '0')->orderBy('posicion', 'asc')->get();
 
         return view('frontend.inicio.inicio', compact('sliders'));
     }

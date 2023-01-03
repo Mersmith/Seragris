@@ -29,12 +29,12 @@
             <p>En los ultimos años, hemos capacitado y asesorado a más de 22,000 agricultores a nivel nacional en
                 diversas zonas del Perú, logrando el desarrollo sostenible y sustentable de gran parte de la agricultura
                 peruana, como base del empleo e impulso del crecimiento nacional.</p>
-            <h5>Leyenda</h5>
+            {{--<h5>Leyenda</h5>
             <p><i class="fa-solid fa-square"></i> Capacitaciones Realizadas</p>
-            <p><i style="color: #f59f14;" class="fa-solid fa-square"></i> Próximas Capacitaciones</p>
+            <p><i style="color: #f59f14;" class="fa-solid fa-square"></i> Próximas Capacitaciones</p>--}}
         </div>
     </div>
     <div class="mapa">
-        <img src="{{ asset('imagenes/producto/sin_foto_producto.png') }}">
+        <img src="{{ asset('imagenes/empresa/conservare.png') }}">
     </div>
 </div>
