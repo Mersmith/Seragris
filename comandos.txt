@@ -191,3 +191,37 @@ git push origin 6_Modificaciones_1
 ->Click en boton Merge pull request
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************04/01/23***************************************
+->BLOG
+php artisan make:model CategoriaBlog -m
+php artisan make:model Post -m
+php artisan make:model Tag -m
+php artisan make:migration create_post_tag_table
+
+php artisan make:livewire Administrador/CategoriaBlog/PaginaCategoriaBlog
+php artisan make:livewire Administrador/Tag/PaginaTag
+php artisan make:livewire Administrador/Post/PaginaTodosPost
+php artisan make:livewire Administrador/Post/PaginaCrearPost
+php artisan make:livewire Administrador/Post/PaginaEditarPost
+
+php artisan make:controller Administrador/Ckeditor5Controller
+php artisan make:model Ckeditor -mf
+
+php artisan make:observer PostObserver --model=Post
+
+->EventServiceProvider
+php artisan make:controller PostController
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 7_Blog
+git branch
+git status
+
+git add .
+git commit -m "Blog"
+git push origin 7_Blog
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

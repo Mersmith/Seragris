@@ -39,7 +39,8 @@
                         </thead>
                         <tbody>
                             @foreach ($administradores as $key => $administrador)
-                                <tr>
+                                <tr
+                                    style="display: {{ $administrador->correo == Auth::user()->email ? 'none' : '' }};">
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ $key + 1 }}
                                     </td>
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
@@ -127,6 +128,16 @@
                             @enderror
                         </label>
                     </div>
+                    <!--Contraseña-->
+                    <div class="contenedor_1_elementos_100">
+                        <label class="label_principal">
+                            <p class="estilo_nombre_input">Contraseña: </p>
+                            <input type="password" wire:model="editarFormulario.contrasena">
+                            @error('editarFormulario.contrasena')
+                                <span>{{ $message }}</span>
+                            @enderror
+                        </label>
+                    </div>
                 </div>
             </x-slot>
             <x-slot name="footer">
@@ -134,8 +145,9 @@
                     <button style="background-color: #009eff;" wire:click="$set('editarFormulario.abierto', false)"
                         wire:loading.attr="disabled" type="submit">Cancelar</button>
 
-                    <button style="background-color: #ffa03d;" wire:click="actualizarAdministrador" wire:loading.attr="disabled"
-                        wire:target="actualizarAdministrador" type="submit">Editar</button>
+                    <button style="background-color: #ffa03d;" wire:click="actualizarAdministrador"
+                        wire:loading.attr="disabled" wire:target="actualizarAdministrador"
+                        type="submit">Editar</button>
                 </div>
             </x-slot>
         </x-jet-dialog-modal>
