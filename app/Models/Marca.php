@@ -21,4 +21,10 @@ class Marca extends Model
     {
         return $this->belongsToMany(Categoria::class);
     }
+
+    //Relacion uno a uno polimorfica
+    public function imagen()
+    {
+        return $this->morphOne(Imagen::class, "imagenable");
+    }
 }

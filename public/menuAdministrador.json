@@ -39,5 +39,27 @@
     "nombrePrincipal": "Sliders",
     "nombrePrincipalUrl": "administrador.slider.index",
     "subMenu1": []
+  },
+  {
+    "id": 7,
+    "nombrePrincipal": "Blog",
+    "nombrePrincipalUrl": "blog",
+    "subMenu1": [
+      {
+        "id": 1,
+        "nombreSubMenu1": "Categorias",
+        "nombreSubMenu1Url": "administrador.categoria.blog"
+      },
+      {
+        "id": 2,
+        "nombreSubMenu1": "Tags",
+        "nombreSubMenu1Url": "administrador.tag"
+      },
+      {
+        "id": 3,
+        "nombreSubMenu1": "Post",
+        "nombreSubMenu1Url": "administrador.post.index"
+      }
+    ]
   }
 ]

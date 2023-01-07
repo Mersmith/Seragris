@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Administrador\Administrador;
 
 use App\Models\Administrador;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -36,6 +37,7 @@ class PaginaAdministradorAdministrador extends Component
         'editarFormulario.apellido.required' => 'El :attribute es requerido.',
         'editarFormulario.celular.required' => 'El :attribute es requerido.',
         'editarFormulario.contrasena.required' => 'La :attribute es requerido.',
+        'editarFormulario.contrasena.min' => 'La :attribute necesita mínimo 9 letras.',
     ];
 
     public function editarAdministrador(Administrador $administrador)
@@ -51,12 +53,18 @@ class PaginaAdministradorAdministrador extends Component
 
     public function actualizarAdministrador()
     {
-        $this->validate([
+
+        $rules = [
             'editarFormulario.nombre' => 'required',
             'editarFormulario.apellido' => 'required',
             'editarFormulario.celular' => 'required',
-            //'editarFormulario.contrasena' => 'required',
-        ]);
+        ];
+
+        if ($this->editarFormulario['contrasena']) {
+            $rules['editarFormulario.contrasena'] = 'required|min:9';
+        }
+
+        $this->validate($rules);
 
         $this->administrador->update(
             [
@@ -65,6 +73,16 @@ class PaginaAdministradorAdministrador extends Component
                 'celular' => $this->editarFormulario['celular'],
             ]
         );
+
+        if ($this->editarFormulario['contrasena']) {
+            $usuario = User::find($this->administrador->user_id);
+
+            //$contrasenaAntiguaHash = $usuario->password;
+            $contrasenaNueva = $this->editarFormulario['contrasena'];
+
+            $usuario->password = Hash::make($contrasenaNueva);
+            $usuario->save();
+        }
 
         $this->reset('editarFormulario');
         $this->emit('mensajeActualizado', "Admnistrador actualizada.");

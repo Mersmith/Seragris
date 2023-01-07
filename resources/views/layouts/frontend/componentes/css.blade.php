@@ -13,6 +13,9 @@
 <link rel="stylesheet" href="{{ asset('frontend/tienda/tienda.css') }}">
 <!-- Styles Producto -->
 <link rel="stylesheet" href="{{ asset('frontend/producto/pagina-producto.css') }}">
+<!-- Styles Blog -->
+<link rel="stylesheet" href="{{ asset('frontend/blog/blog.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/blog/blog-inicio.css') }}">
 
 <!-- Plugin -->
 <script src="{{ asset('vendor/glider-autoplay/glider-autoplay.min.js') }}"></script>

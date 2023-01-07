@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Frontend\InicioController;
 use App\Http\Controllers\Frontend\ProductoController;
+use App\Http\Controllers\PostController;
 use App\Http\Livewire\Frontend\Tienda\TiendaPagina;
 use Illuminate\Support\Facades\Route;
 
@@ -34,3 +35,6 @@ Route::get('contactenos', function () {
 Route::get('productos', TiendaPagina::class)->name('tienda');
 
 Route::get('producto/{producto}', [ProductoController::class, 'mostrar'])->name('producto.index');
+
+Route::get('blog', [PostController::class, 'index'])->name('blog.index');
+Route::get('blog/{post}', [PostController::class, 'show'])->name('blog.post');

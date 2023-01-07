@@ -52,6 +52,12 @@
   },
   {
     "id": 5,
+    "nombrePrincipal": "BLOG",
+    "nombrePrincipalUrl": "blog",
+    "subMenu1": []
+  },
+  {
+    "id": 6,
     "nombrePrincipal": "CONTÁCTENOS",
     "nombrePrincipalUrl": "contactenos",
     "subMenu1": []

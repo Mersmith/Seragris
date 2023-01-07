@@ -16,6 +16,28 @@
                     @enderror
                 </label>
             </div>
+            <!--Imagen-->
+            <div class="contenedor_1_elementos_imagen">
+                <label class="label_principal">
+                    <p class="estilo_nombre_input">Imagen: </p>
+                    <div class="contenedor_subir_imagen_sola" style="width: 100px; height: 100px;">
+                        @if ($crearFormulario['imagen_ruta'])
+                            <img style="width: 100px; height: 100px;"
+                                src="{{ $crearFormulario['imagen_ruta']->temporaryUrl() }}">
+                        @else
+                            <img style="width: 100px; height: 100px;"
+                                src="{{ asset('imagenes/producto/sin_foto_producto.png') }}">
+                        @endif
+                        <div class="opcion_cambiar_imagen">
+                            Editar <i class="fa-solid fa-camera"></i>
+                        </div>
+                    </div>
+                    <input type="file" wire:model="crearFormulario.imagen_ruta" style="display: none">
+                    @error('crearFormulario.imagen_ruta')
+                        <span>{{ $message }}</span>
+                    @enderror
+                </label>
+            </div>
             <!--Enviar-->
             <div class="contenedor_1_elementos">
                 <input type="submit" value="Crear Marca">
@@ -31,6 +53,9 @@
                             <tr>
                                 <th
                                     class="px-5 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                                    Imagen</th>
+                                <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                     Nombre</th>
                                 <th
                                     class="px-5 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
@@ -40,6 +65,13 @@
                         <tbody>
                             @foreach ($marcas as $marca)
                                 <tr>
+                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                        <div class="flex-shrink-0 w-10 h-10 handle cursor-grab"
+                                            style="display: flex; align-items: center;">
+                                            <img class="w-full h-full "
+                                                src="{{ Storage::url($marca->imagen->imagen_ruta) }}" alt="" />
+                                        </div>
+                                    </td>
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                         {{ $marca->nombre }}
                                     </td>
@@ -84,6 +116,28 @@
             <!--Contenido Modal-->
             <x-slot name="content">
                 <div class="formulario">
+                    <!--Imagen-->
+                    <div class="contenedor_1_elementos_imagen">
+                        <label class="label_principal">
+                            <p class="estilo_nombre_input">Imagen: </p>
+                            <div class="contenedor_subir_imagen_sola">
+                                @if ($editarImagen)
+                                    <img style="width: 100px; height: 100px;" src="{{ $editarImagen->temporaryUrl() }}"
+                                        alt="">
+                                @else
+                                    <img style="width: 100px; height: 100px;"
+                                        src="{{ Storage::url($marca->imagen->imagen_ruta) }}  ">
+                                @endif
+                                <div class="opcion_cambiar_imagen">
+                                    Editar <i class="fa-solid fa-camera"></i>
+                                </div>
+                            </div>
+                            <input type="file" wire:model="editarImagen" id="editarImagen" style="display: none">
+                            @error('editarImagen')
+                                <span>{{ $message }}</span>
+                            @enderror
+                        </label>
+                    </div>
                     <!--Nombre-->
                     <div class="contenedor_1_elementos_100">
                         <label class="label_principal">
