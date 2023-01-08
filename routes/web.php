@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Administrador\ShortLinkController;
 use App\Http\Controllers\Frontend\InicioController;
 use App\Http\Controllers\Frontend\ProductoController;
 use App\Http\Controllers\PostController;
@@ -38,3 +39,5 @@ Route::get('producto/{producto}', [ProductoController::class, 'mostrar'])->name(
 
 Route::get('blog', [PostController::class, 'index'])->name('blog.index');
 Route::get('blog/{post}', [PostController::class, 'show'])->name('blog.post');
+
+Route::get('/{shortlink}', ShortLinkController::class)->name('shortlink.redirigir');

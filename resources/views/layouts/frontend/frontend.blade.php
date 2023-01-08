@@ -6,8 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('tituloPagina')</title>
+    <title>Seragris - @yield('tituloPagina')</title>
+    <meta name="description" content="@yield('descripcion')">
+    <!--Facebook-->
+    <meta property="og:site_name" content="Seragris">
+    <meta property="og:title" content="@yield('tituloPagina')">
+    <meta property="og:description" content="@yield('descripcion')">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es">
+    <meta property="og:url" content="@yield('url')">
+    <meta property="og:image" content="@yield('imagen')">
 
+    <!--Twitter-->
+    <meta name="twitter:title" content="@yield('tituloPagina')">
+    <meta name="twitter:image" content="@yield('imagen')">
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 

@@ -1,5 +1,11 @@
 <x-frontend-layout>
-    @section('tituloPagina', 'Producto | ' . $producto->nombre)
+    <!--SEO-->
+    @section('tituloPagina', 'Producto | ' . $producto->nombre ?? 'Seragris')
+    @section('descripcion', '' . $producto->descripcion)
+    @section('url', '' . url()->current())
+    @section('imagen', '' . Storage::url($producto->imagenes->first()->imagen_ruta))
+
+    <!--CONTENIDO PÁGINA-->
     <div class="contenedor_pagina_producto">
         <div class="contenedor_centrar_pagina">
             <div class="contenedor_info_producto">
@@ -19,7 +25,8 @@
                 </div>
                 <!--Informacion-->
                 <div class="contenedor_producto_info">
-                    <img style="height: 40px;" src="{{ Storage::url($producto->marca->imagen->imagen_ruta) }}" alt="">
+                    <img style="height: 40px;" src="{{ Storage::url($producto->marca->imagen->imagen_ruta) }}"
+                        alt="">
                     <p style="font-size: 13px; text-transform: uppercase; color: rgb(153, 153, 153);">PRODUCTOS >
                         {{ $producto->subcategoria->categoria->nombre }} >
                         <span style="color: #12866f;">{{ $producto->subcategoria->nombre }}</span>

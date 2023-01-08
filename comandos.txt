@@ -225,3 +225,30 @@ git push origin 7_Blog
 ->Click en boton Merge pull request
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+->Acortador de link
+php artisan make:model ShortLink -m
+php artisan make:model Visit -m
+
+php artisan migrate:rollback
+
+php artisan make:livewire Administrador/ShortLink/ShortLinkInicio
+php artisan make:livewire Administrador/ShortLink/ShortLinkMostrar
+->https://github.com/Bacon/BaconQrCode
+composer require bacon/bacon-qr-code
+
+php artisan make:controller Administrador/ShortLinkController
+composer remove vendor/bacon/bacon-qr-code
+composer remove bacon/bacon-qr-code
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b 8_Recortar_Link
+git branch
+git status
+
+git add .
+git commit -m "Recortar Link"
+git push origin 8_Recortar_Link
+->Click en boton Merge pull request
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

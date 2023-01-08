@@ -14,6 +14,8 @@ use App\Http\Livewire\Administrador\Post\PaginaTodosPost;
 use App\Http\Livewire\Administrador\Producto\PaginaCrearProductoAdministrador;
 use App\Http\Livewire\Administrador\Producto\PaginaEditarProductoAdministrador;
 use App\Http\Livewire\Administrador\Producto\PaginaTodosProductoAdministrador;
+use App\Http\Livewire\Administrador\ShortLink\ShortLinkInicio;
+use App\Http\Livewire\Administrador\ShortLink\ShortLinkMostrar;
 use App\Http\Livewire\Administrador\Slider\PaginaSliderAdministrador;
 use App\Http\Livewire\Administrador\Subcategoria\PaginaSubcategoriaAdministrador;
 use App\Http\Livewire\Administrador\Tag\PaginaTag;
@@ -46,4 +48,8 @@ Route::get('post/crear', PaginaCrearPost::class)->name('post.crear');
 Route::get('post/{post}/editar', PaginaEditarPost::class)->name('post.editar');
 
 Route::post('ckeditor-upload', [Ckeditor5Controller::class, 'upload'])->name('ckeditor.upload');
+
+Route::get('recortar-link', ShortLinkInicio::class)->name('shortlink.index');
+Route::get('recortar-link/{shortlink}', ShortLinkMostrar::class)->name('shortlink.mostrar');
+
 
